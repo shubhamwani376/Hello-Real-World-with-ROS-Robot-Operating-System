@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Start the sensor info publisher node.-->
+  <node name="sensor_info_publisher" pkg="hrwros_week1" type="sensor_info_publisher.py"
+    output="screen"/>
+
+  <!-- Start the BoxHeightInformation publisher node (Assignment 1)-->
+  <node name="compute_box_height" pkg="hrwros_week1" type="week1_assignment1.py"
+    output="screen"/>
+
+  <!-- Start the metres_to_feet service server ROS node.-->
+  <node name="metres_to_feet" pkg="hrwros_week1" type="metres_to_feet_server.py"
+    output="screen"/>
+
+  <!--BoxHeightInformation subscriber / convert to Feet node (Assignment 2)-->
+  <node name="box_height_in_feet" pkg="hrwros_week1" type="week1_assignment2.py"
+    output="screen"/>
+</launch>
